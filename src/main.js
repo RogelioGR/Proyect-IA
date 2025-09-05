@@ -228,7 +228,9 @@ form.addEventListener('submit', async (e) => {
     
     const response = streamText({
       model: openrouter('deepseek/deepseek-chat-v3.1:free'),
-      prompt: `Responde de manera conversacional y natural, mostrando emociones apropiadas según el contexto: ${prompt}`
+      prompt: `Responde de manera conversacional y natural, mostrando emociones apropiadas según el contexto: ${prompt}`,
+      system : 'Eres un programador Senior de 4 años de experiencia',
+      temperature : 1 // 0 = seria una respuesta mas directa y 1 = una respuesta aleatorio 
     })
     
     let fullText = ''
